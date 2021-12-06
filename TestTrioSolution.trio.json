@@ -1,0 +1,25 @@
+{
+  "CustomerId": "93d2e5cb-4877-448c-8c5e-496dba26f178",
+  "ProjectId": "53c180f4-c6a6-4b13-9cf0-2628725e944c",
+  "ServerUri": "https://stage.testresults.io/",
+  "Environments": [
+    {
+      "$type": "Progile.Trio.Designer.DomainObjects.EnvironmentImage, Progile.Trio.Designer",
+      "ImagePathStaticEnvironment": null,
+      "RaiseImagePathPopupBeforeExecution": false,
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "Name": "Static image"
+    },
+    {
+      "$type": "Progile.Trio.Designer.DomainObjects.EnvironmentVNC, Progile.Trio.Designer",
+      "Ip": "123.45.67.89",
+      "Username": "TestUser",
+      "Password": "123456",
+      "RemoteDirectory": "\"\\\\mystorageaccount.file.core.windows.net\\myfileshare\"::AZURE\\mystorageaccount::ctzMq410TV3wS7upTBcunJTDLEJwMAZuFPfr0mrrA08==",
+      "Protocol": "vnc",
+      "Id": "e370871c-8fe3-4b78-aef0-c937dc6909f0",
+      "Name": "TestEnvironment"
+    }
+  ],
+  "SolutionVersion": "3.1"
+}
