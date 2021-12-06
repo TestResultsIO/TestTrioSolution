@@ -1,0 +1,50 @@
+[
+  {
+    "TypeName": "Progile.TRIO.BaseModel.Button",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.Checkbox",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.Dropdown",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.GenericScroller",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.HorizontalScroller",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.IconButton",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.Label",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.LabelWithButton",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.LabelWithCheckbox",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.LabelWithValue",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.PwTextBox",
+    "Interactions": []
+  },
+  {
+    "TypeName": "Progile.TRIO.BaseModel.TextBox",
+    "Interactions": []
+  }
+]

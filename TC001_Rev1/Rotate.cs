@@ -38,6 +38,8 @@ namespace TC001_Rev1
             ExpectedResults = "Expected1")]
         public void Step1(ITester t)
         {
+            App.TestScreen1.Switch();
+
             t.Report.FailStep("REPLACE_ME");
         }
 
