@@ -1,50 +1,573 @@
-[
-  {
-    "TypeName": "Progile.TRIO.BaseModel.Button",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.Checkbox",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.Dropdown",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.GenericScroller",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.HorizontalScroller",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.IconButton",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.Label",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.LabelWithButton",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.LabelWithCheckbox",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.LabelWithValue",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.PwTextBox",
-    "Interactions": []
-  },
-  {
-    "TypeName": "Progile.TRIO.BaseModel.TextBox",
-    "Interactions": []
-  }
-]
+{
+  "ModelTypeList": [
+    {
+      "TypeName": "Progile.TRIO.EnvironmentModel.Window",
+      "BaseTypeName": "Progile.TRIO.BaseModel.BaseScreen"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.BaseScreen",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement",
+      "HiddenOverrideInteractions": [
+        {
+          "Parameters": [
+            {
+              "Name": "elementInArea",
+              "DisplayName": "elementInArea",
+              "Type": "Progile.TRIO.BaseModel.OnScreenElement"
+            }
+          ],
+          "MethodName": "SetSearchArea",
+          "DisplayName": "SetSearchArea",
+          "ReturnType": "Progile.TRIO.BaseModel.OnScreenElement",
+          "IsGenericReturnType": "T"
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.OnScreenElement",
+      "BaseTypeName": "System.Object",
+      "Interactions": [
+        {
+          "MethodName": "WaitForAppear",
+          "DisplayName": "Verify element appears",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The element {this} was displayed on the screen.",
+          "FailedMessage": "The element {this} was not found on the screen."
+        },
+        {
+          "MethodName": "WaitForDisappear",
+          "DisplayName": "Verify element disappears",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The element {this} disappeared from the screen.",
+          "FailedMessage": "The element {this} was unexpectedly still displayed on the screen."
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "elementInArea",
+              "DisplayName": "Element in area",
+              "Type": "Progile.TRIO.BaseModel.OnScreenElement"
+            }
+          ],
+          "MethodName": "SetSearchArea",
+          "DisplayName": "Set search area",
+          "ReturnType": "Progile.TRIO.BaseModel.OnScreenElement",
+          "IsGenericReturnType": "T"
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.IWindow",
+      "BaseTypeName": null
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.Button",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "Click",
+          "DisplayName": "Click",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "DoubleClick",
+          "DisplayName": "Double-click",
+          "ReturnType": "System.Void"
+        },
+        {
+          "MethodName": "ClickWithUpdateCheck",
+          "DisplayName": "Click with update check",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "Hover",
+          "DisplayName": "Hover over",
+          "ReturnType": "System.Void"
+        },
+        {
+          "MethodName": "WaitForActive",
+          "DisplayName": "Verify button becomes active",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The button {this} was active.",
+          "FailedMessage": "The button {this} was not active."
+        },
+        {
+          "MethodName": "WaitForInactive",
+          "DisplayName": "Verify button becomes inactive",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The button {this} was inactive.",
+          "FailedMessage": "The button {this} was not inactive."
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.Checkbox",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement",
+      "Interactions": [
+        {
+          "MethodName": "IsChecked",
+          "DisplayName": "Verify checkbox is checked",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The checkbox {this} was checked.",
+          "FailedMessage": "The checkbox {this} was not checked."
+        },
+        {
+          "MethodName": "IsUnchecked",
+          "DisplayName": "Verify checkbox is unchecked",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The checkbox {this} was unchecked.",
+          "FailedMessage": "The checkbox {this} was unexpectedly checked."
+        },
+        {
+          "MethodName": "Check",
+          "DisplayName": "Check",
+          "ReturnType": "System.Void"
+        },
+        {
+          "MethodName": "Uncheck",
+          "DisplayName": "Uncheck",
+          "ReturnType": "System.Void"
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.ContextMenu",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.DropdownMenu",
+      "BaseTypeName": "Progile.TRIO.BaseModel.Dropdown",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "selections",
+              "DisplayName": "Submenus and value",
+              "Type": "System.String[]"
+            }
+          ],
+          "MethodName": "SelectValueFromSubmenu",
+          "DisplayName": "Select a value from a submenu",
+          "ReturnType": "System.Void"
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.Dropdown",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "value",
+              "DisplayName": "Value",
+              "Type": "System.String"
+            }
+          ],
+          "MethodName": "SelectValue",
+          "DisplayName": "Select value",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "value",
+              "DisplayName": "Expected value",
+              "Type": "System.String"
+            },
+            {
+              "Name": "actualValue",
+              "DisplayName": "actualValue",
+              "Type": "out_string"
+            }
+          ],
+          "MethodName": "VerifySelectedValue",
+          "DisplayName": "Verify the selected value",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The expected value {value} was shown correctly as the selected value on {this}.",
+          "FailedMessage": "The selected value on {this} was {actualValue} instead of the expected value {value}."
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "value",
+              "DisplayName": "Expected value",
+              "Type": "System.String"
+            }
+          ],
+          "MethodName": "VerifyValueInList",
+          "DisplayName": "Verify a value in the list",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The expected value {value} was shown in the dropdown list {this}.",
+          "FailedMessage": "The expected value {value} was not shown in the dropdown list {this}."
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.HorizontalScroller",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.IScroller",
+      "BaseTypeName": null
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.GenericScroller",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.IconButton",
+      "BaseTypeName": "Progile.TRIO.BaseModel.Button"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.Label",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.LabelWithButton",
+      "BaseTypeName": "Progile.TRIO.BaseModel.LabelWithElementBase",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "Click",
+          "DisplayName": "Click",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "DoubleClick",
+          "DisplayName": "Double-click",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "Hover",
+          "DisplayName": "Hover over",
+          "ReturnType": "System.Void"
+        },
+        {
+          "MethodName": "WaitForActive",
+          "DisplayName": "Verify button becomes active",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The button {this} was active.",
+          "FailedMessage": "The button {this} was not active."
+        },
+        {
+          "MethodName": "WaitForInactive",
+          "DisplayName": "Verify button becomes inactive",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The button {this} was inactive.",
+          "FailedMessage": "The button {this} was not inactive."
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.LabelWithElementBase",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.LabelWithCheckbox",
+      "BaseTypeName": "Progile.TRIO.BaseModel.LabelWithElementBase",
+      "Interactions": [
+        {
+          "MethodName": "IsChecked",
+          "DisplayName": "Verify checkbox is checked",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The checkbox {this} was checked.",
+          "FailedMessage": "The checkbox {this} was not checked."
+        },
+        {
+          "MethodName": "IsUnchecked",
+          "DisplayName": "Verify checkbox is unchecked",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The checkbox {this} was unchecked.",
+          "FailedMessage": "The checkbox {this} was unexpectedly checked."
+        },
+        {
+          "MethodName": "Check",
+          "DisplayName": "Check",
+          "ReturnType": "System.Void"
+        },
+        {
+          "MethodName": "Uncheck",
+          "DisplayName": "Uncheck",
+          "ReturnType": "System.Void"
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.LabelWithValue",
+      "BaseTypeName": "Progile.TRIO.BaseModel.LabelWithElementBase",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "value",
+              "DisplayName": "Expected value",
+              "Type": "System.String"
+            },
+            {
+              "Name": "actualValue",
+              "DisplayName": "actualValue",
+              "Type": "out_string"
+            }
+          ],
+          "MethodName": "VerifyValue",
+          "DisplayName": "Verify the value",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The expected value {value} was shown correctly for {this}.",
+          "FailedMessage": "The value for {this} was {actualValue} instead of the expected value {value}."
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "value",
+              "DisplayName": "Expected value",
+              "Type": "System.String"
+            },
+            {
+              "Name": "waitTime",
+              "DisplayName": "Wait time",
+              "Type": "System.TimeSpan"
+            },
+            {
+              "Name": "actualValue",
+              "DisplayName": "actualValue",
+              "Type": "out_string"
+            }
+          ],
+          "MethodName": "WaitForValue",
+          "DisplayName": "Wait for the value",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The expected value {value} was shown correctly for {this}.",
+          "FailedMessage": "The value for {this} was {actualValue} after the timeout instead of the expected value {value}."
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.PwTextBox",
+      "BaseTypeName": "Progile.TRIO.BaseModel.TextBox",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "pw",
+              "DisplayName": "Password",
+              "Type": "System.String"
+            }
+          ],
+          "MethodName": "Enter",
+          "DisplayName": "Enter",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "expectedText",
+              "DisplayName": "expectedText",
+              "Type": "System.String"
+            }
+          ],
+          "MethodName": "VerifyText",
+          "DisplayName": "Verify the password (only length)",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "Verify the password (only length) on {this} passed",
+          "FailedMessage": "Verify the password (only length) on {this} failed"
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.TextBox",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "textToEnter",
+              "DisplayName": "Text to enter",
+              "Type": "System.String"
+            }
+          ],
+          "MethodName": "Enter",
+          "DisplayName": "Enter",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "textToEnter",
+              "DisplayName": "Text to enter",
+              "Type": "System.String"
+            }
+          ],
+          "MethodName": "EnterWithoutVerification",
+          "DisplayName": "Enter without verification",
+          "ReturnType": "System.Void"
+        },
+        {
+          "MethodName": "PasteText",
+          "DisplayName": "Paste from clipboard",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "expectedText",
+              "DisplayName": "Expected text",
+              "Type": "System.String"
+            },
+            {
+              "Name": "actualText",
+              "DisplayName": "actualText",
+              "Type": "out_string"
+            }
+          ],
+          "MethodName": "VerifyText",
+          "DisplayName": "Verify the text",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "The expected text {expectedText} was shown correctly in {this}.",
+          "FailedMessage": "The text in {this} was {actualText} instead of the expected text {expectedText}."
+        },
+        {
+          "MethodName": "ClickOutOfBox",
+          "DisplayName": "Click out of the text box",
+          "ReturnType": "System.Void"
+        }
+      ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.Row",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "HoverOver",
+          "DisplayName": "Hover over",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "SelectRow",
+          "DisplayName": "Click",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "verification",
+              "DisplayName": "verification",
+              "Type": "interaction"
+            }
+          ],
+          "MethodName": "SelectRowWithDoubleClick",
+          "DisplayName": "Double-click",
+          "ReturnType": "System.Void"
+        },
+        {
+          "MethodName": "SelectRowWithUpdateCheck",
+          "DisplayName": "Click with update check",
+          "ReturnType": "System.Void"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "element",
+              "DisplayName": "element",
+              "IsGenericType": "T",
+              "Type": "Progile.TRIO.BaseModel.OnScreenElement"
+            }
+          ],
+          "MethodName": "GetElementInRow",
+          "DisplayName": "Get Element in row",
+          "ReturnType": "Progile.TRIO.BaseModel.OnScreenElement",
+          "IsGenericReturnType": "T"
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "button",
+              "DisplayName": "button",
+              "Type": "Progile.TRIO.BaseModel.Button"
+            }
+          ],
+          "MethodName": "GetButtonInRow",
+          "DisplayName": "Get Button in row",
+          "ReturnType": "Progile.TRIO.BaseModel.Button",
+          "IsObsolete": true
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "checkbox",
+              "DisplayName": "checkbox",
+              "Type": "Progile.TRIO.BaseModel.Checkbox"
+            }
+          ],
+          "MethodName": "GetCheckboxInRow",
+          "DisplayName": "Get Checkbox in row",
+          "ReturnType": "Progile.TRIO.BaseModel.Checkbox",
+          "IsObsolete": true
+        }
+      ]
+    }
+  ],
+  "ModelOcrParamList": [
+    {
+      "FullName": "Progile.TRIO.BaseModel.OcrParams.AlternativeEngine"
+    },
+    {
+      "FullName": "Progile.TRIO.BaseModel.OcrParams.ExactMatch"
+    }
+  ]
+}

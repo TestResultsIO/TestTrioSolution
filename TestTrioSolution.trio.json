@@ -16,10 +16,18 @@
       "Username": "TestUser",
       "Password": "123456",
       "RemoteDirectory": "\"\\\\mystorageaccount.file.core.windows.net\\myfileshare\"::AZURE\\mystorageaccount::ctzMq410TV3wS7upTBcunJTDLEJwMAZuFPfr0mrrA08==",
+      "ScreenDimensions": null,
       "Protocol": "vnc",
       "Id": "e370871c-8fe3-4b78-aef0-c937dc6909f0",
       "Name": "TestEnvironment"
     }
   ],
-  "SolutionVersion": "4.0"
+  "SolutionVersion": "6.3",
+  "SolutionType": null,
+  "ElementsFilter": [],
+  "GetLabelTextSettings": {
+    "OcrPadding": 5,
+    "MaxDetectedCharacters": 40,
+    "MaxDetectedWords": 5
+  }
 }

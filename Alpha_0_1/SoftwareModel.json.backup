@@ -15,7 +15,7 @@
   "Screens": [
     {
       "Id": "f57f714f-1e3c-4a2c-ac6e-a0f358a09e6d",
-      "LastUpdate": "2023-11-16T09:52:20.6060061Z",
+      "LastUpdate": "2023-11-16T09:52:10.7166067Z",
       "Name": "TestScreen1",
       "DisplayName": "Test Screen 1",
       "BaseClass": "Progile.TRIO.BaseModel.BaseScreen",
