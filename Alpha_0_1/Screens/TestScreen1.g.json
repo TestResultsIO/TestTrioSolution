@@ -1,0 +1,132 @@
+{
+  "Id": "f57f714f-1e3c-4a2c-ac6e-a0f358a09e6d",
+  "Name": "TestScreen1",
+  "DisplayName": "Test Screen 1",
+  "BaseClass": "Progile.TRIO.BaseModel.BaseScreen",
+  "IsBaseScreen": false,
+  "RelativeLocation": "Screens",
+  "OpenImagePath": "Images\\TestScreen1\\Screen_Loaded",
+  "ScreenImagePath": "Images\\TestScreen1\\Screen_Image",
+  "Position": {
+    "X": 0,
+    "Y": 0,
+    "Width": 1280,
+    "Height": 720
+  },
+  "Elements": [
+    {
+      "Id": "b7071aae-3888-4a95-9399-1fbeacaa6eb9",
+      "Position": {
+        "X": 1063,
+        "Y": 461,
+        "Width": 127,
+        "Height": 120
+      },
+      "Name": "SwitchButton",
+      "Type": "Progile.TRIO.BaseModel.Button",
+      "Parameters": [
+        {
+          "Name": "tester",
+          "Value": "t"
+        },
+        {
+          "Name": "displayName",
+          "Value": "Switch Button"
+        },
+        {
+          "Name": "searchType",
+          "Value": "Image"
+        },
+        {
+          "Name": "activeImageReference",
+          "Value": "Images\\TestScreen1\\Switch Button\\active"
+        },
+        {
+          "Name": "inactiveImageReference",
+          "Value": "Images\\TestScreen1\\Switch Button\\inactive"
+        },
+        {
+          "Name": "filters",
+          "Value": "ScreenSelect"
+        }
+      ]
+    },
+    {
+      "Id": "f55afeee-8e97-4eb3-8439-78aebe5f1b57",
+      "Position": null,
+      "Name": "ReferenceToExistingImage",
+      "Type": "Progile.TRIO.BaseModel.Label",
+      "Parameters": [
+        {
+          "Name": "tester",
+          "Value": "t"
+        },
+        {
+          "Name": "displayName",
+          "Value": "Reference to existing image"
+        },
+        {
+          "Name": "searchType",
+          "Value": "Image"
+        },
+        {
+          "Name": "imageReference",
+          "Value": "Images\\ImageForSwModel.png"
+        },
+        {
+          "Name": "filters",
+          "Value": "ScreenSelect"
+        }
+      ]
+    },
+    {
+      "Id": "0c6ce1cc-5d27-40a3-8005-caed016e17a3",
+      "Position": {
+        "X": 1062,
+        "Y": 459,
+        "Width": 126,
+        "Height": 119
+      },
+      "Name": "TextLabel",
+      "Type": "Progile.TRIO.BaseModel.LabelWithCheckbox",
+      "Parameters": [
+        {
+          "Name": "tester",
+          "Value": "t"
+        },
+        {
+          "Name": "displayName",
+          "Value": "Text Label"
+        },
+        {
+          "Name": "checkboxPosition",
+          "Value": "Right"
+        },
+        {
+          "Name": "searchType",
+          "Value": "Text"
+        },
+        {
+          "Name": "searchTextForLabel",
+          "Value": "Static Test Image"
+        },
+        {
+          "Name": "checkedImageReference",
+          "Value": "Images\\TestScreen1\\Text Label\\Checkbox\\checked"
+        },
+        {
+          "Name": "uncheckedImageReference",
+          "Value": "Images\\TestScreen1\\Text Label\\Checkbox\\unchecked"
+        },
+        {
+          "Name": "checkboxLineHeight",
+          "Value": "150"
+        },
+        {
+          "Name": "filters",
+          "Value": "ScreenSelect"
+        }
+      ]
+    }
+  ]
+}

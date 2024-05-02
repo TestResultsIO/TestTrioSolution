@@ -14,15 +14,15 @@
       "$type": "Progile.Trio.Designer.DomainObjects.EnvironmentVNC, Progile.Trio.Designer",
       "Ip": "123.45.67.89",
       "Username": "TestUser",
-      "Password": "123456",
-      "RemoteDirectory": "\"\\\\mystorageaccount.file.core.windows.net\\myfileshare\"::AZURE\\mystorageaccount::ctzMq410TV3wS7upTBcunJTDLEJwMAZuFPfr0mrrA08==",
+      "Password": "encrypt:V2:cbrp5yYQhd3s1XGISOn5usm2H9y/tpzuVFvCy6MrKsA=",
+      "RemoteDirectory": "encrypt:V2:+PEF0n/xcnzanX2oJtwrI1AOgRlGUXWvPW0GNlqHMQnDDZOJUbieGAiunQGjnrCkxAbRpEA4cw5YWEdCC6mQJTQSBW0/4PFR7d+vSzfiv634v6OHSI3HfYQBxkyiEOjYT8NrQ/J4J2JBoyBKAkkJlvHZRuMk7VmPAFWTnTlOR12VRf2ySozFQ2qCulcat+V9",
       "ScreenDimensions": null,
       "Protocol": "vnc",
       "Id": "e370871c-8fe3-4b78-aef0-c937dc6909f0",
       "Name": "TestEnvironment"
     }
   ],
-  "SolutionVersion": "6.3",
+  "SolutionVersion": "8.0",
   "SolutionType": null,
   "ElementsFilter": [],
   "GetLabelTextSettings": {

@@ -66,6 +66,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ModelCapabilities.json" />
+    <None Include="Screens\TestScreen1.g.json">
+      <DependentUpon>TestScreen1.cs</DependentUpon>
+    </None>
     <None Include="SoftwareModel.json" />
   </ItemGroup>
   <ItemGroup>
