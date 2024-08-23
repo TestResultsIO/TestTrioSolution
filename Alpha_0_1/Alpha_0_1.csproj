@@ -15,17 +15,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="lib\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="Screens\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Progile.TRIO.BaseModel" Version="*" />
-    <PackageReference Include="Progile.TRIO.Engine.TestFramework" Version="5.7.0.2" />
+    <PackageReference Include="Progile.TRIO.Engine.TestFramework" Version="*" />
     <PackageReference Include="Progile.TRIO.EnvironmentModel.Windows" Version="*" />
   </ItemGroup>
 
