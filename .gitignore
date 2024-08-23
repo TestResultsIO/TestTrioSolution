@@ -22,10 +22,12 @@ bld/
 [Oo]bj/
 [Ll]og/
 
-# TestResults.io user settings & evidence
-*.trio.user.json
+# TestResults.io solution items directory, user settings & evidence
+.trio/
 EvidenceDirectory/
+*.user.json
 .tfignore
+launchSettings.json
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -263,6 +265,3 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-/TC001_Rev1/Properties/launchSettings.json
-/TC003_Rev1/Properties/launchSettings.json
-/TC004_Rev1/Properties/launchSettings.json

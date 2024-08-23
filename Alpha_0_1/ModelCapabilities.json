@@ -210,49 +210,6 @@
       "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
     },
     {
-      "TypeName": "Progile.TRIO.BaseModel.DropdownMenu",
-      "BaseTypeName": "Progile.TRIO.BaseModel.Dropdown",
-      "Interactions": [
-        {
-          "Parameters": [
-            {
-              "Name": "selections",
-              "DisplayName": "Submenus and value",
-              "IsOptional": false,
-              "Type": "System.String[]"
-            }
-          ],
-          "MethodName": "SelectValueFromSubmenu",
-          "DisplayName": "Select a value from a submenu",
-          "ReturnType": "System.Void",
-          "HintText": "Opens the dropdown menu, searches the first value from given \"Submenus and value\" in the list \r\nand selects it to open the next submenu. Then the next value is found in the submenu and so on.\r\nIf one of the texts cannot be found, throws a TestStepAbortedException."
-        }
-      ],
-      "HiddenOverrideInteractions": [
-        {
-          "Parameters": [
-            {
-              "Name": "value",
-              "DisplayName": "value",
-              "IsOptional": false,
-              "Type": "System.String"
-            },
-            {
-              "Name": "actualValue",
-              "DisplayName": "actualValue",
-              "IsOptional": false,
-              "Type": "out_string"
-            }
-          ],
-          "MethodName": "VerifySelectedValue",
-          "DisplayName": "VerifySelectedValue",
-          "ReturnType": "System.Boolean",
-          "PassedMessage": "VerifySelectedValue on {this} passed",
-          "FailedMessage": "VerifySelectedValue on {this} failed"
-        }
-      ]
-    },
-    {
       "TypeName": "Progile.TRIO.BaseModel.Dropdown",
       "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement",
       "Interactions": [
@@ -327,20 +284,57 @@
           "PassedMessage": "The expected value {value} was shown in the dropdown list {this}.",
           "FailedMessage": "The expected value {value} was not shown in the dropdown list {this}.",
           "HintText": "Opens the dropdown list and verifies that the provided value\r\nis present in the dropdown list (includes scrolling). \r\nCloses the dropdown list again."
+        },
+        {
+          "MethodName": "GetSelectedValue",
+          "DisplayName": "Get selected value",
+          "ReturnType": "System.String",
+          "HintText": "Reads the selected text from the Dropdown with OCR"
         }
       ]
     },
     {
-      "TypeName": "Progile.TRIO.BaseModel.HorizontalScroller",
-      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
-    },
-    {
-      "TypeName": "Progile.TRIO.BaseModel.IScroller",
-      "BaseTypeName": null
-    },
-    {
-      "TypeName": "Progile.TRIO.BaseModel.GenericScroller",
-      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
+      "TypeName": "Progile.TRIO.BaseModel.DropdownMenu",
+      "BaseTypeName": "Progile.TRIO.BaseModel.Dropdown",
+      "Interactions": [
+        {
+          "Parameters": [
+            {
+              "Name": "selections",
+              "DisplayName": "Submenus and value",
+              "IsOptional": false,
+              "Type": "System.String[]"
+            }
+          ],
+          "MethodName": "SelectValueFromSubmenu",
+          "DisplayName": "Select a value from a submenu",
+          "ReturnType": "System.Void",
+          "HintText": "Opens the dropdown menu, searches the first value from given \"Submenus and value\" in the list \r\nand selects it to open the next submenu. Then the next value is found in the submenu and so on.\r\nIf one of the texts cannot be found, throws a TestStepAbortedException."
+        }
+      ],
+      "HiddenOverrideInteractions": [
+        {
+          "Parameters": [
+            {
+              "Name": "value",
+              "DisplayName": "value",
+              "IsOptional": false,
+              "Type": "System.String"
+            },
+            {
+              "Name": "actualValue",
+              "DisplayName": "actualValue",
+              "IsOptional": false,
+              "Type": "out_string"
+            }
+          ],
+          "MethodName": "VerifySelectedValue",
+          "DisplayName": "VerifySelectedValue",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "VerifySelectedValue on {this} passed",
+          "FailedMessage": "VerifySelectedValue on {this} failed"
+        }
+      ]
     },
     {
       "TypeName": "Progile.TRIO.BaseModel.IconButton",
@@ -511,6 +505,12 @@
           "PassedMessage": "The expected value {value} was shown correctly for {this}.",
           "FailedMessage": "The value for {this} was {actualValue} after the timeout instead of the expected value {value}.",
           "HintText": "Waits for the specified \"Expected value\" for the given \"Wait time\"."
+        },
+        {
+          "MethodName": "ReadValue",
+          "DisplayName": "Read value",
+          "ReturnType": "System.String",
+          "HintText": "Reads the value in the Search Rectangle determined by the Label and the relative position using OCR."
         }
       ]
     },
@@ -589,6 +589,12 @@
           "HintText": "Pastes the text from the clipboard on the SUT to the text box.\r\nOverwrites what was in the textbox before."
         },
         {
+          "MethodName": "GetText",
+          "DisplayName": "Get text",
+          "ReturnType": "System.String",
+          "HintText": "Copies or reads the text from the TextBox (depending on the TextBoxType)"
+        },
+        {
           "Parameters": [
             {
               "Name": "expectedText",
@@ -611,12 +617,32 @@
           "HintText": "Verifies if the text in the textbox is the same as the provided \"Expected text\"."
         },
         {
+          "MethodName": "VerifyReadonly",
+          "DisplayName": "Verify textbox is read-only",
+          "ReturnType": "System.Boolean",
+          "PassedMessage": "Verify textbox is read-only on {this} passed",
+          "FailedMessage": "Verify textbox is read-only on {this} failed",
+          "HintText": "Verifies the text is read-only by comparing the text in the textbox before and after typing in the textbox."
+        },
+        {
           "MethodName": "ClickOutOfBox",
           "DisplayName": "Click out of the text box",
           "ReturnType": "System.Void",
           "HintText": "Clicks out of the textbox, slightly to the left, \r\nto take away the focus of the box."
         }
       ]
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.GenericScroller",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.IScroller",
+      "BaseTypeName": null
+    },
+    {
+      "TypeName": "Progile.TRIO.BaseModel.HorizontalScroller",
+      "BaseTypeName": "Progile.TRIO.BaseModel.OnScreenElement"
     },
     {
       "TypeName": "Progile.TRIO.BaseModel.Row",
