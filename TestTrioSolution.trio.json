@@ -8,7 +8,7 @@
       "ImagePathStaticEnvironment": null,
       "RaiseImagePathPopupBeforeExecution": false,
       "Id": "00000000-0000-0000-0000-000000000000",
-      "Name": "Static image"
+      "Name": "Playground"
     },
     {
       "$type": "Progile.Trio.Designer.DomainObjects.EnvironmentVNC, Progile.Trio.Designer",
@@ -22,7 +22,7 @@
       "Name": "TestEnvironment"
     }
   ],
-  "SolutionVersion": "8.0",
+  "SolutionVersion": "8.1",
   "SolutionType": null,
   "ElementsFilter": [],
   "GetLabelTextSettings": {
