@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha_0_1", "Alpha_0_1\Alpha_0_1.csproj", "{3FE7ACAB-E9E5-49F7-ADF9-EE6AA99C345E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TC001_Rotate", "TC001_Rotate", "{0186784F-4F1B-44FA-B7B6-D1AB32E06F83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC001_Rev1", "TC001_Rev1\TC001_Rev1.csproj", "{DF5433B1-D32B-4C93-9E84-F2690109C625}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha_0_1", "Alpha_0_1\Alpha_0_1.csproj", "{3FE7ACAB-E9E5-49F7-ADF9-EE6AA99C345E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha_0_1_Installer", "Alpha_0_1_Installer\Alpha_0_1_Installer.csproj", "{08FD5C70-6B91-4169-A6C9-086BFF14D8DA}"
 EndProject
